@@ -25,7 +25,7 @@ import java.util.List;
         RequestQueue requestQueue;
         TextView textView;
 
-        String baseURL = "http://34.83.229.37:8080";
+        String baseURL = "REDACTED"; //example: http://0.0.0.0:8080
 
 
         @Override
@@ -34,101 +34,7 @@ import java.util.List;
             setContentView(R.layout.activity_main);
             findViewById(R.id.itemsButton).setOnClickListener(this);
             requestQueue = Volley.newRequestQueue(this);
-
-             //String name = "";
-//            getItembyName(name);
-//
-//            //hard coded for now
-//            try {
-//                addItem("Blah Blah", 50, 12.12);
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
         }
-
-//        private void addItem(String name, int quantity, double price) throws JSONException {
-//            //creating URL
-////            String baseURL = "http://34.83.229.37:8080";
-//            String route = "/api/items/";
-//            String url = baseURL + route;
-//
-//            JSONObject newItem = null;
-//
-//            newItem = new JSONObject();
-//            newItem.put("name", name);
-//            newItem.put("quantity", quantity);
-//            newItem.put("price", price);
-//
-//            JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.POST, url, newItem,
-//                    new Response.Listener<JSONObject>() {
-//                        @Override
-//                        public void onResponse(JSONObject response) {
-//
-//                        }
-//                    }, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError error) {
-//                    Toast.makeText(MainActivity.this, "Something went wrong: " + error.getMessage(), Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            requestQueue.add(jRequest);
-//        }
-//
-//        private void getItembyName(String name) {
-////            String baseURL = "http://34.83.229.37:8080";
-//            String route = "/api/items/?name="+name;
-//            String url = baseURL + route;
-//            JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.GET, url, null,
-//                    new Response.Listener<JSONObject>() {
-//                        @Override
-//                        public void onResponse(JSONObject response) {
-//                            try {
-//                                //JSONObject  = (JSONObject) response.get("data");
-//                                String name = (String) response.get("name");
-//
-////                                TextView textview = findViewById(R.id.itemsButton);
-////                                textview.setText(name);
-//
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                    }, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError error) {
-//                    Toast.makeText(MainActivity.this, "Something went wrong: " + error.getMessage(), Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            requestQueue.add(jRequest);
-//        }
-//
-//        private void getItembyId(String id) {
-////            String baseURL = "http://34.83.229.37:8080";
-//            String route = "/api/items/" + id;
-//            String url = baseURL + route;
-//            JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.GET, url, null,
-//                    new Response.Listener<JSONObject>() {
-//                        @Override
-//                        public void onResponse(JSONObject response) {
-//                            try {
-//                                //JSONObject data = (JSONObject) response.get("data");
-//                                String id = (String) response.get("id");
-//
-////                                TextView textview = findViewById(R.id.??);
-////                                textview.setText(id);
-//
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                            }
-//                        }
-//                    }, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError error) {
-//                    Toast.makeText(MainActivity.this, "Something went wrong: " + error.getMessage(), Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            requestQueue.add(jRequest);
-//        }
 
         @Override
         public void onClick(final View v) {
