@@ -1,5 +1,5 @@
-# COMP-3504-ASGN2
+# Widget List CRUD
 
-Assignment 2 - Using android studio as our framework
+Assignment 2 - Using android studio as our framework we created a widget list which CRUD capability connected to an cloud-based database,  
 
-Note: some changes didn't need approval because we worked on it as a group through Discord.
+Group members: Lidiya Artemenko, Randy Lam, Daniel Yankov, Yuan Tao Zhou
