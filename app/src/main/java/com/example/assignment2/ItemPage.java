@@ -39,14 +39,13 @@ public class ItemPage extends AppCompatActivity {
     private EditText itemName;
     private EditText itemQuantity;
     private EditText itemCost;
-    //private EditText supplierID; // not used ever
     private ArrayList<Item> itemList = new ArrayList<Item>();
     private ListView list;
     private ArrayAdapter<Item> adapter;
     private RequestQueue requestQueue;
 
 
-    private String baseURL = "http://34.83.229.37:8080";
+    private String baseURL = "REDACTED"; //example: http://0.0.0.0:8080
 
 
     @Override
@@ -63,22 +62,8 @@ public class ItemPage extends AppCompatActivity {
         Button search = (Button) findViewById(R.id.searchBtn);
         Button add = (Button) findViewById(R.id.addButton);
         list = (ListView) findViewById(R.id.list_view);
-//        adapter = new ArrayAdapter<Item>(getApplicationContext(), android.R.layout.simple_spinner_item, itemList);
-//        list.setAdapter(adapter);
-
-//        itemList.add(new Item("", "", "", ""));
-//        adapter.notifyDataSetChanged();
-//        itemList.remove(itemList.size()-1);
-//        adapter.notifyDataSetChanged();
 
         requestQueue = Volley.newRequestQueue(this);
-
-
-//        String str = "";
-//        String[] items = new String[0];
-//        String[] itemsData;
-//        try {
-            //InputStream input = getAssets().open("items.txt");
 
             String route = "/api/items/"; // endpoint for getting all items
             String url = baseURL + route;
@@ -90,12 +75,10 @@ public class ItemPage extends AppCompatActivity {
                         public void onResponse(JSONArray response) {
                             try {
 
-                            //Toast.makeText(ItemPage.this, response.toString(), Toast.LENGTH_SHORT).show();
-
                                 for (int i = 0; i < response.length(); i++) {
 
                                     JSONObject obj = response.getJSONObject(i);
-                                    int id = (Integer) obj.get("id"); // might be int?
+                                    int id = (Integer) obj.get("id");
                                     String name = (String) obj.get("name");
                                     String quantity = (String) obj.get("quantity");
                                     String price = (String) obj.get("price");
@@ -110,21 +93,7 @@ public class ItemPage extends AppCompatActivity {
                                     Log.d("myTag", item.getDescription());
                                     Log.d("myTag", item.getQuantity());
                                     Log.d("myTag", item.getPrice());
-
-//                                    Toast.makeText(ItemPage.this, item.getId(), Toast.LENGTH_SHORT).show();
-//                                    ListView listView = findViewById(R.id.list_view);
-//                                    listView.setText(item.toString());
                                 }
-
-//                                String id = (String) obj.get("id"); // [1,2,3,4,5..41] or [1]
-//                                String name = (String) obj.get("name");
-//                                String quantity = (String) obj.get("quantity");
-//                                String price = (String) obj.get("price");
-//                                Item item = new Item(name, quantity, price);
-//                                itemList.add(item);
-
-//                                TextView textview = findViewById(R.id.??);
-//                                textview.setText(id);
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -151,14 +120,10 @@ public class ItemPage extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
                                    @Override
                                    public void onClick(View v) {
-//                itemList.add(new Item("" + (itemList.size() + 1), itemName.getText().toString(), itemQuantity.getText().toString(), itemCost.getText().toString()));
-//                adapter.notifyDataSetChanged();
-                                       //old code above ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
                                        String route = "/api/items/";
                                        String url = baseURL + route;
 
-                                       //JSONObject newItem = null;
                                        Log.d("LIST SIZE", "" + itemList.size());
                                        String newItemId = "" + (itemList.size() + 1);
                                        String newItemName = String.valueOf(itemName.getText());
@@ -248,33 +213,6 @@ public class ItemPage extends AppCompatActivity {
         });
     }
 
-//    private void addItem(String name, int quantity, double price) throws JSONException {
-//        //creating URL
-////            String baseURL = "http://34.83.229.37:8080";
-//        String route = "/api/items/";
-//        String url = baseURL + route;
-//
-//        JSONObject newItem = null;
-//
-//        newItem = new JSONObject();
-//        newItem.put("name", name);
-//        newItem.put("quantity", quantity);
-//        newItem.put("price", price);
-//
-//        JsonObjectRequest jRequest = new JsonObjectRequest(Request.Method.POST, url, newItem,
-//                new Response.Listener<JSONObject>() {
-//                    @Override
-//                    public void onResponse(JSONObject response) {
-//
-//                    }
-//                }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Toast.makeText(ItemPage.this, "Something went wrong: " + error.getMessage(), Toast.LENGTH_LONG).show();
-//            }
-//        });
-//        requestQueue.add(jRequest);
-//    }
 }
 
 
