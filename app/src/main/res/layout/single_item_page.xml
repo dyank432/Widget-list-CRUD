@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="itemDescription"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="ID:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="itemID"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Quantity:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="itemQuantity"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Price:"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="itemPrice"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+</LinearLayout>
+
